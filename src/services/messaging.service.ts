@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs'
 })
 export class MessagingService {
   currentMessage = new BehaviorSubject(null);
-  tokenShare :any;
+  tokenShare :any = "";
   constructor(private angularFireMessaging: AngularFireMessaging) {
 
   }
