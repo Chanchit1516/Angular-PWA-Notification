@@ -16,6 +16,7 @@ export class MessagingService {
     this.angularFireMessaging.requestToken.subscribe(
       (token) => {
         this.tokenShare = token;
+        console.log("Oattest1");
         console.log(token);
       },
       (err) => {
