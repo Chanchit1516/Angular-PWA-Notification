@@ -9,10 +9,9 @@ import { MessagingService } from '../services/messaging.service'
 export class AppComponent {
   title = 'Angular-PWA-Noti';
   message: any;
-  
-  constructor(private messagingService: MessagingService) { } 
-  
-  
+  constructor(public messagingService: MessagingService) { }
+
+
   ngOnInit() {
     this.messagingService.requestPermission()
     this.messagingService.receiveMessage()
