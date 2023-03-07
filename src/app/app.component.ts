@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MessagingService } from '../services/messaging.service'
+import { SwPush } from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
@@ -16,5 +17,11 @@ export class AppComponent {
     this.messagingService.requestPermission()
     this.messagingService.receiveMessage()
     this.message = this.messagingService.currentMessage
+  }
+
+  copyToken(){
+
+    navigator.clipboard.writeText(this.messagingService.tokenShare);
+
   }
 }
